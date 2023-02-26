@@ -1,0 +1,154 @@
+#welcome-first {
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:linear-gradient(rgba(0,0,0,.5), rgb(0, 0,0, .5)),url(../images/desk.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+}
+
+.login-screen {
+  height: 65%;
+  width: 70%;
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 3em;
+}
+
+h5 {
+  font-size: 24px;
+}
+
+.welcome-area .header-text {
+  position: absolute;
+  top: 55%;
+  transform: translateY(-60%);
+  text-align: left;
+  width: 100%;
+}
+
+.login-screen .grey-text {
+  opacity: .5;
+  text-align: center;
+  margin: 20px 20px 40px 20px;
+}
+
+.login-screen .forgot-pass {
+  font-size: 20px;
+  color: #FF0000;
+  text-align: center;
+}
+
+.form-control {
+  -webkit-border-radius: 5;
+  -moz-border-radius: 5;
+        border-radius: 5;
+}
+
+form {
+    margin: 20px 10px;
+}
+
+.button-space {
+  text-align: center;
+  padding: 20px;
+}
+
+a.main-button {
+  font-size: 16px;
+  border-radius: 15px;
+  padding: 10px 80px;
+  background-color: #FF0000;
+  color: #fff;
+  letter-spacing: 0.25px;
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+a.main-button:hover {
+  background-color: #0088e8;
+  color: #000;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+.title {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  padding: 5px;
+}
+
+.title h5 {
+  margin: 20px 0 0 20px;
+}
+
+.title img {
+  width: 5%;
+}
+
+.form-group .p-viewer {
+  z-index: 9999;
+  position: absolute;
+  right: 250px;
+  margin-top: -40px;
+}
+ 
+@media (max-width: 991px) {
+  html,
+  body {
+    overflow: hidden;
+    }
+
+  #welcome-first {
+    overflow: hidden;
+    background-image: linear-gradient(rgba(0,0,0,.5), rgb(0, 0,0, .5)),url(../images/mobile-new.png);
+  }
+
+  .login-screen {
+    width: 90%;
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+  }
+
+  .welcome-area {
+    margin-bottom: 100px;
+    box-shadow: inset 0 0 0 1000px rgba(0,0,0,.2);
+    }
+
+  .login-screen {
+      margin: 10px 30px;
+  }
+
+  a.main-button {
+    padding: 10px 30px;
+  }
+
+  .title {
+    padding: 20px;
+  }
+
+  .title h5 {font-size: 18px;
+    margin: 5px 0 0 2px;
+    
+  }
+
+  .title img {
+    width: 30px;
+  }  
+
+  .form-group .p-viewer {
+    right: 75px;
+  }
+}

@@ -1,0 +1,157 @@
+#welcome-first {
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:linear-gradient(rgba(0,0,0,.5), rgb(0, 0,0, .5)),url(../images/desk.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+}
+
+.login-screen {
+  width: 70%;
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 3em;
+}
+
+h5 {
+  font-size: 24px;
+}
+
+.welcome-area .header-text {
+  position: absolute;
+  top: 55%;
+  transform: translateY(-60%);
+  text-align: left;
+  width: 100%;
+}
+
+.login-screen .grey-text {
+  font-size: 20px;
+  font-weight: 400;
+  opacity: .5;
+  text-align: center;
+  margin: 20px 20px 40px 20px;
+}
+
+.login-screen .forgot-pass {
+  font-size: 20px;
+  color: #FF0000;
+  text-align: center;
+}
+
+.form-control {
+  -webkit-border-radius: 5;
+  -moz-border-radius: 5;
+        border-radius: 5;
+}
+
+form {
+    margin: 20px 10px;
+}
+
+.button-space {
+  text-align: center;
+  padding: 90px;
+}
+
+a.main-button {
+  font-size: 16px;
+  border-radius: 15px;
+  padding: 10px 100px;
+  background-color: #3DE22E;
+  color: #000;
+  letter-spacing: 0.25px;
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+main-button:hover {
+  background-color: #0088e8;
+  color: #fff;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+.title {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  padding: 5px;
+}
+
+.title h5 {
+  margin: 20px 0 0 20px;
+}
+
+.title img {
+  width: 5%;
+}
+    
+@media (max-width: 991px) {
+  html,
+  body {
+    overflow: hidden;
+    }
+
+  #welcome-first {
+    overflow: hidden;
+    background-image: linear-gradient(rgba(0,0,0,.5), rgb(0, 0,0, .5)),url(../images/mobile-new.png);
+  }
+
+  .login-screen {
+    margin: auto;
+    justify-content: center;
+    width: 90%;
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+  }
+
+  .login-screen .grey-text {
+    font-size: 16px;
+  }
+
+  .welcome-area {
+    margin-bottom: 100px;
+    box-shadow: inset 0 0 0 1000px rgba(0,0,0,.2);
+  }
+
+  a.main-button {
+    padding: 10px;
+    
+  }
+
+  a.main-button:hover {
+    background-color: #0088e8;
+    color: #000;
+  }
+
+  .button-space {
+    text-align: center;
+    padding: 40px;
+  }
+
+  .title {
+    padding: 20px;
+  }
+
+  .title h5 {font-size: 18px;
+    margin: 5px 0 0 2px;
+    
+  }
+
+  .title img {
+    width: 30px;
+  }  
+}
