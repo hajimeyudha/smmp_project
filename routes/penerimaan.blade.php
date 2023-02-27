@@ -1,9 +1,69 @@
-{{-- Membuat Element Child dari Main Layout --}}
-@extends('layouts.main-layout-admin')
-{{-- Judul halaman --}}
-@section('title', 'Penyaluran')
+<!DOCTYPE html>
+<html lang="en">
 
-@section('content')
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+
+  <title>PT Subur Makmur Migas Pratama</title>
+  <!-- Additional CSS Files -->
+  <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="../css/font-awesome.css">
+  <link rel="stylesheet" type="text/css" href="../css/templatemo-art-factory.css">
+  <link rel="stylesheet" type="text/css" href="../css/owl-carousel.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" />
+  <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/css/bootstrap-datetimepicker.min.css"
+    rel="stylesheet" />
+
+  <style>
+    html,
+    body {
+      background-color: rgb(236, 234, 234);
+    }
+
+    .edit {
+      margin-left: 85px;
+    }
+
+    .edit-btn {
+      cursor: pointer;
+      text-decoration: none;
+      font-size: 16px;
+      color: #000;
+      border-radius: 10px;
+      padding: 10px 60px;
+      background-color: #3DE22E;
+      letter-spacing: 0.25px;
+      font-weight: 800;
+    }
+
+    .datepicker {
+      margin-top: 100px;
+    }
+
+    @media (max-width: 991px) {
+      #date-input {
+        width: 90%;
+        margin-bottom: 5px;
+      }
+
+      .datepicker {
+        margin-left: 300px;
+      }
+    }
+
+    .form-input {
+      text-align: left;
+    }
+  </style>
+</head>
+
+<body>
+
   <!--  -->
   <div class="row top-mini-nav">
     <div class="box-judul">
@@ -314,4 +374,113 @@
   </div>
   <div class="modal-bg-scs" style="display: none;"></div>
 
-  @endsection
+  <!-- jQuery -->
+  <script src="assets/js/jquery-2.1.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://kit.fontawesome.com/59bcfd8744.js" crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+  <!-- <script src="./assets/js/karyawan.js"></script> -->
+  <script>
+    $(document).ready(function () {
+      $('.modal-link-kary').click(function () {
+        console.log('buka');
+        $('.modal-kary').show();
+        $('.modal-bg').show();
+      });
+      $('.modal-kary .close').click(function () {
+        $('.modal-kary').hide();
+        $('.modal-bg').hide();
+      });
+      $('.modal-kary a.main-button').click(function () {
+        $('.modal-kary').hide();
+        $('.modal-bg').hide();
+      })
+    })
+
+    $(document).ready(function () {
+      $('.modal-link').click(function () {
+        console.log('buka');
+        $('.modal-scs').show();
+        $('.modal-bg-scs').show();
+        console.log('modal-bg')
+      });
+      $('.modal-scs .close').click(function () {
+        $('.modal-scs').hide();
+        $('.modal-bg-scs').hide();
+      });
+    })
+
+    $(document).ready(function () {
+      $('.modal-link-save').click(function () {
+        console.log('baru');
+        $('.modal-scs').show();
+        $('.modal-bg-scs').show();
+      });
+      $('.modal-scs-save .close').click(function () {
+        $('.modal-scs').hide();
+        $('.modal-bg-scs').hide();
+      });
+    })
+
+    $(document).ready(function () {
+      $('.modal-link-savee').click(function () {
+        console.log('baru');
+        $('.modal-scs').show();
+        $('.modal-bg-scs').show();
+      });
+      $('.modal-scs-save .close').click(function () {
+        $('.modal-scs').hide();
+        $('.modal-bg-scs').hide();
+      });
+    })
+
+    $(function () {
+      $('#scrollToTop').bind("click", function () {
+        console.log('naik')
+        $('html, body').animate({ scrollTop: 0 }, 1200);
+        return false;
+      });
+    });
+
+    function setDatepicker(_this) {
+      let className = $(_this).parent()
+        .parent().parent().attr('class');
+      let removeSpace = className.replace(' ', '.');
+      $("." + removeSpace).datepicker({
+        format: "dd/mm/yyyy",
+        orientation: "bottom auto",
+        autoclose: true,
+        showOnFocus: "false"
+      });
+    }
+
+    var body = document.body,
+      html = document.documentElement;
+
+    var height = Math.max(body.scrollHeight, body.offsetHeight,
+      html.clientHeight, html.scrollHeight, html.offsetHeight);
+    console.log(height);
+
+  </script>
+  <!-- Bootstrap -->
+  <script src="assets/js/popper.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+
+  <!-- Plugins -->
+  <script src="assets/js/owl-carousel.js"></script>
+  <script src="assets/js/scrollreveal.min.js"></script>
+  <script src="assets/js/waypoints.min.js"></script>
+  <script src="assets/js/jquery.counterup.min.js"></script>
+  <script src="assets/js/imgfix.min.js"></script>
+
+  <!-- Global Init -->
+  <script src="assets/js/custom.js"></script>
+
+</body>
+
+</html>

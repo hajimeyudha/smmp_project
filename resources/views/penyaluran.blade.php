@@ -2,79 +2,77 @@
 @extends('layouts.main-layout-admin')
 {{-- Judul halaman --}}
 @section('title', 'Penyaluran')
-{{-- Tambahan head --}}
-@section('tambahHead')
-    <link
-    href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/css/bootstrap-datetimepicker.min.css"
-    rel="stylesheet" />
-
+@section('css')
 <style>
     html,
     body {
-        background-color: rgb(236, 234, 234);
+      background-color: rgb(236, 234, 234);
     }
 
     .edit {
-        margin-left: 85px;
+      margin-left: 85px;
     }
 
     .edit-btn {
-        cursor: pointer;
-        text-decoration: none;
-        font-size: 16px;
-        color: #000;
-        border-radius: 10px;
-        padding: 10px 60px;
-        background-color: #3DE22E;
-        letter-spacing: 0.25px;
-        font-weight: 800;
+      cursor: pointer;
+      text-decoration: none;
+      font-size: 16px;
+      color: #000;
+      border-radius: 10px;
+      padding: 10px 60px;
+      background-color: #3DE22E;
+      letter-spacing: 0.25px;
+      font-weight: 800;
     }
 
     .datepicker {
-        margin-top: 100px;
+      margin-top: 100px;
     }
 
     @media (max-width: 991px) {
-        #date-input {
-            width: 90%;
-            margin-bottom: 5px;
-        }
+      #date-input {
+        width: 90%;
+        margin-bottom: 5px;
+      }
 
-        .datepicker {
-            margin-left: 300px;
-        }
+      .datepicker {
+        margin-left: 300px;
+      }
     }
 
     .form-input {
-        text-align: left;
+      text-align: left;
     }
-</style>
-    @endsection
-</head>
-
+  </style>
+@endsection
 @section('content')
 
     <!--  -->
     <div class="row top-mini-nav">
-        <div class="box-judul">
-            <img src="./assets/images/check.png" />
-            <p class="judul">Rekapitulasi Penyaluran</p>
-        </div>
         <div class="color-btn">
-            <div class="col-lg-3 col-sm-2 btn"><a class="mini-button" id="info-1">LPG 3 KG</a></div>
-            <div class="col-lg-3 col-sm-2 btn"><a class="mini-button" id="info-2">BG 5,5 KG</a></div>
-            <div class="col-lg-3 col-sm-2 btn"><a class="mini-button" id="info-3">BG 12 KG</a></div>
-            <div class="col-lg-3 col-sm-2 btn"><a class="mini-button" id="info-4">LPG 12 KG</a></div>
-            <div class="col-lg-3 col-sm-2 btn"><a class="mini-button" id="info-5">LPG 50 KG</a></div>
+            <div class="box-judul">
+                <img src="{{asset('images/check.png')}}" />
+                <p class="judul">Rekapitulasi Penyaluran</p>
+            </div>
+            <div class="col-sm-1 btn"><a class="mini-button" id="info-1">LPG 3 KG</a></div>
+            <div class="col-sm-1 btn"><a class="mini-button" id="info-2">BG 5,5 KG</a></div>
+            <div class="col-sm-1 btn"><a class="mini-button" id="info-3">BG 12 KG</a></div>
+            <div class="col-sm-1 btn"><a class="mini-button" id="info-4">LPG 12 KG</a></div>
+            <div class="col-sm-1 btn"><a class="mini-button" id="info-5">LPG 50 KG</a></div>
+            <div class="input-group mb-3" style="width: 220px">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1">@</span>
+                </div>
+                <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+              </div>
         </div>
     </div>
 
     <section class="section bg-setting" id="edit">
         <div class="row mx-5" id="mini-wrap">
-
             <div id="date-input">
-                <div class="input-group date" style="border-radius: 50px;">
-                    <input class="form-control" type="text" name="dob" id="dob" placeholder="2022-01" value="">
+                <div class="input-group date" style="border-radius: 50px, width: 100px;">
+                    <input class="form-control tanggal" type="text" name="dob" id="dob" placeholder="2022-01" value="">
                     <span class="input-group-prepend">
                         <span class="input-group-text">
                             <i class="fas fa-calendar-alt" onclick="setDatepicker(this)">
@@ -97,7 +95,7 @@
                     Download Bentuk
                     <a href="javascript:void(0);" class="icon">
                         <!-- <i onclick="myFunction(this)"class="fa fa-arrow-down"></i> -->
-                        <img src="./assets/images/arrow-down-download.png" onclick="myFunction(this)" />
+                        <img src="{{asset('images/arrow-down-download.png')}}" onclick="myFunction(this)" />
                     </a>
                 </button>
 

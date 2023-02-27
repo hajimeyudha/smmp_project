@@ -7,7 +7,6 @@
   <meta name="description" content="" />
   <meta name="author" content="Template Mo" />
   <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet" />
-
   <title>@yield('title') | PT Subur Makmur Migas Pratama</title>
   <!-- Additional CSS Files -->
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" />
@@ -15,7 +14,8 @@
   <link rel="stylesheet"  href="{{asset('css/templatemo-art-factory.css')}}" />
   <link rel="stylesheet"  href="{{asset('css/owl-carousel.css')}}" />
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" />
-  @yield('tambahHead')
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/css/bootstrap-datetimepicker.min.css" rel="stylesheet" />
+  @yield('css')
 </head>
 
 <body>
