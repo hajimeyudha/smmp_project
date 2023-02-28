@@ -1858,8 +1858,10 @@ a.mini-nav-button {
     justify-content: space-between;
   }
 
-  #mini-wrap {
+  #mini-wrap, .mini-wrap {
+    display: flex;
     justify-content: center;
+    background-color: blue;
   }
 
   .box-judul img {
@@ -1867,7 +1869,7 @@ a.mini-nav-button {
     height: 20px;
   }
 
-  .top-mini-nav .judul {
+  .top-mini-nav {
     margin-right: 100px;
   }
 }
@@ -1902,6 +1904,32 @@ a.mini-nav-button {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.judulRekap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.judulGambar {
+  display: block;
+  margin-right: 10px;
+}
+
+.date .kontrolDate, .tanggalDisini {
+  position: absolute;
+  top: 8px;
+  color: red;
+}
+
+.tanggalDisini {
+  left: 35px;
+}
+
+.textSearch {
+  position: absolute;
+  top: 8px;
 }
 
 .modal {
@@ -2183,10 +2211,12 @@ a.mini-nav-button {
   display: flex;
 }
 
-.tanggal {
-  position: static;
-  display: block;
-  width: 300px;
+.input-group .form-control .tanggal , .tanggalTeks, .mini-box, .download {
+
+}
+
+.input-group .form-control .tanggal {
+  width: 50%;
 }
 
 

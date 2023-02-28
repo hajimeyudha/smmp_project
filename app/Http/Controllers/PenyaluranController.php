@@ -10,7 +10,6 @@ class PenyaluranController extends Controller
     function index(){
         $Penyaluran = Penyaluran::all();
         $Data_penyaluran = Data_penyaluran::all();
-        dd($Data_penyaluran);
-        return view('penyaluran');
+        return view('penyaluran', ['ListPenyaluran' => $Data_penyaluran]);
     }
 }

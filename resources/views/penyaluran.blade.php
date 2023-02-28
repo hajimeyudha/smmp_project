@@ -51,8 +51,8 @@
     <div class="row top-mini-nav">
         <div class="color-btn">
             <div class="box-judul">
-                <img src="{{asset('images/check.png')}}" />
-                <p class="judul">Rekapitulasi Penyaluran</p>
+                <img class="judulGambar" src="{{asset('images/check.png')}}" />
+                <p class="judul judulRekap">Rekapitulasi Penyaluran</p>
             </div>
             <div class="col-sm-1 btn"><a class="mini-button" id="info-1">LPG 3 KG</a></div>
             <div class="col-sm-1 btn"><a class="mini-button" id="info-2">BG 5,5 KG</a></div>
@@ -61,20 +61,20 @@
             <div class="col-sm-1 btn"><a class="mini-button" id="info-5">LPG 50 KG</a></div>
             <div class="input-group mb-3" style="width: 220px">
                 <div class="input-group-prepend">
-                  <span class="input-group-text" id="basic-addon1">@</span>
+                  <span class="input-group-text textSearch" id="basic-addon1">@</span>
                 </div>
-                <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                <input type="text" class="form-control tanggalDisini" placeholder="Tanggal" aria-label="Username" aria-describedby="basic-addon1">
               </div>
         </div>
     </div>
 
     <section class="section bg-setting" id="edit">
-        <div class="row mx-5" id="mini-wrap">
+        <div class="row mx-5 mini-wrap" id="mini-wrap">
             <div id="date-input">
-                <div class="input-group date" style="border-radius: 50px, width: 100px;">
+                <div class="input-group date kontrolDate" style="border-radius: 50px, width: 100px;">
                     <input class="form-control tanggal" type="text" name="dob" id="dob" placeholder="2022-01" value="">
                     <span class="input-group-prepend">
-                        <span class="input-group-text">
+                        <span class="input-group-text tanggalTeks">
                             <i class="fas fa-calendar-alt" onclick="setDatepicker(this)">
                             </i>
                         </span>
@@ -88,17 +88,14 @@
                 </div>
             </a>
 
-
             <div class="dropdown">
-
-                <button type="button" id="btn-download" class="btn dropdown-toggle" data-toggle="dropdown">
+                <button type="button" id="btn-download" class="btn dropdown-toggle download" data-toggle="dropdown">
                     Download Bentuk
                     <a href="javascript:void(0);" class="icon">
                         <!-- <i onclick="myFunction(this)"class="fa fa-arrow-down"></i> -->
                         <img src="{{asset('images/arrow-down-download.png')}}" onclick="myFunction(this)" />
                     </a>
                 </button>
-
                 <div class="dropdown-menu download">
                     <div class="select-download">
                         <img src="./assets/images/kiri.png" class="pl-2" />
@@ -109,7 +106,6 @@
                         <a class="dropdown-item modal-link">Excel</a>
                     </div>
                 </div>
-
             </div>
 
         </div>
@@ -118,6 +114,11 @@
             <a href="#"><i class="close far fa-times-circle"></i></a>
             <p class="text-center">Berhasil Mengunduh</p>
         </div>
+        {{$ListPenyaluran}}
+
+        @foreach ($ListPenyaluran as $itemm)
+            <li>{{$itemm->keterangan_penyaluran}}</li>
+        @endforeach
         <div class="modal-bg-scs" style="display: none;"></div>
 
         <div class="edit-table">
@@ -136,42 +137,25 @@
                     <td><a href="karyawan-penerimaan.html" class="edit-button"
                         style="background-color: #3DE22E; color:#000;">CREATE</a></td>
                 </tr>
+                @foreach ($ListPenyaluran as $item)
                 <tr>
-                    <td>B-001</td>
+                    <td>B-{{$item->id_data_penyaluran}}</td>
                     <td>CV INDOPERTA</td>
-                    <td>LUNAS</td>
-                    <td>2-9-2022</td>
-                    <td>2-11-2022</td>
+                    <td>{{$item->status_penyaluran}}</td>
+                    <td>{{$item->tanggal_penyaluran}}</td>
+                    <?php  
+                    $date = $item->tanggal_penyaluran;
+                    $dateFix = date('Y-m-d', strtotime($date. ' + 1 days'));
+                    ?>
+                    <td>{{$dateFix}}</td>
                     <td>60</td>
-                    <td>Barang belum dikirim</td>
+                    <td>{{$item->keterangan_penyaluran}}</td>
                     <td><a href="#" class="modal-link-kary edit-button">UPDATE</a>
                         <a href="#" class="modal-link-kary edit-button cancel">CANCEL</a>
                     </td>
                 </tr>
-                <tr>
-                    <td>B-001</td>
-                    <td>CV INDOPERTA</td>
-                    <td>LUNAS</td>
-                    <td>2-9-2022</td>
-                    <td>2-11-2022</td>
-                    <td>60</td>
-                    <td>Barang belum dikirim</td>
-                    <td><a href="#" class="modal-link-kary edit-button">UPDATE</a>
-                        <a href="#" class="modal-link-kary edit-button cancel">CANCEL</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>B-001</td>
-                    <td>CV INDOPERTA</td>
-                    <td>LUNAS</td>
-                    <td>2-9-2022</td>
-                    <td>2-11-2022</td>
-                    <td>60</td>
-                    <td>Barang belum dikirim</td>
-                    <td><a href="#" class="modal-link-kary edit-button">UPDATE</a>
-                        <a href="#" class="modal-link-kary edit-button cancel">CANCEL</a>
-                    </td>
-                </tr>
+                @endforeach
+            
             </table>
         </div>
         <!-- <div class="edit">
@@ -280,19 +264,4 @@
         var height = Math.max(body.scrollHeight, body.offsetHeight,
             html.clientHeight, html.scrollHeight, html.offsetHeight);
         console.log(height);
-
-    </script>
-    <!-- Bootstrap -->
-    <script src="assets/js/popper.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-
-    <!-- Plugins -->
-    <script src="assets/js/owl-carousel.js"></script>
-    <script src="assets/js/scrollreveal.min.js"></script>
-    <script src="assets/js/waypoints.min.js"></script>
-    <script src="assets/js/jquery.counterup.min.js"></script>
-    <script src="assets/js/imgfix.min.js"></script>
-
-    <!-- Global Init -->
-    <script src="assets/js/custom.js"></script>
     @endsection

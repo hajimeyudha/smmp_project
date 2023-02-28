@@ -86,13 +86,12 @@
     <!-- FOOTER -->
   <section class="section" id="footer">
     <div class="footer-content">
-      <a href="/home#home"><img src="./assets/images/sm.png" /></a>
       <a href="/home#home" class="logo">PT SUBUR MAKMUR MIGAS PRATAMA</a>
     </div>
   </section>
 
   <!-- jQuery -->
-  <script src="assets/js/jquery-2.1.0.min.js"></script>
+  <script src="{{asset('js/jquery-2.1.0.min.js')}}"></script>
   <script src="https://kit.fontawesome.com/59bcfd8744.js" crossorigin="anonymous"></script>
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
   <script type="text/javascript">
@@ -104,18 +103,18 @@
     });
   </script>
   <!-- Bootstrap -->
-  <script src="assets/js/popper.js"></script>
-  <script src="assets/js/bootstrap.min.js"></script>
+  <script src="{{asset('js/popper.js')}}"></script>
+  <script src="{{asset('js/bootstrap.min.js')}}"></script>
 
   <!-- Plugins -->
-  <script src="assets/js/owl-carousel.js"></script>
-  <script src="assets/js/scrollreveal.min.js"></script>
-  <script src="assets/js/waypoints.min.js"></script>
-  <script src="assets/js/jquery.counterup.min.js"></script>
-  <script src="assets/js/imgfix.min.js"></script>
+  <script src="{{asset('js/owl-carousel.js')}}"></script>
+  <script src="{{asset('js/scrollreveal.min.js')}}"></script>
+  <script src="{{asset('js/waypoints.min.js')}}"></script>
+  <script src="{{asset('js/jquery.counterup.min.js')}}"></script>
+  <script src="{{asset('js/imgfix.min.js')}}"></script>
 
   <!-- Global Init -->
-  <script src="assets/js/custom.js"></script>
+  <script src="{{asset('js/custom.js')}}"></script>
   @yield('tambahanFoot')
 </body>
 
