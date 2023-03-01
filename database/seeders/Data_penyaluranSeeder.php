@@ -32,7 +32,7 @@ class Data_penyaluranSeeder extends Seeder
         //     ]);
         // }
 
-        Data_penyaluran::factory()->count(9)->create();
+        Data_penyaluran::factory()->count(20)->create();
         
     }
 }

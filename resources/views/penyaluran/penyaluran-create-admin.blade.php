@@ -1,19 +1,24 @@
-
-
+{{-- Membuat Element Child dari Main Layout --}}
+@extends('layouts.main-layout-cssjs')
+{{-- Judul halaman --}}
+@section('title', 'Create Admin')
+{{-- CONTENT START --}}
+@section('content')
 <body>
   <div class="welcome-area" id="welcome-first">
     <div class="create-screen">
       <a href="Admin-create-penyaluran.html"><i class="close far fa-times-circle"></i></a>
       <h5 class="text-center" style="margin-bottom: 2rem">
-        Create Karyawan Penyaluran
+        Create Admin Penyaluran
       </h5>
+      <form action="{{url('/penyaluran/create/tambah')}}" method="POST">
       <div class="form-input">
         <div class="form-group">
           <div class="col-md-2">
             <label><b>Nama Pangkalan</b></label>
           </div>
           <div class="col-md-8">
-            <input type="text" class="form-control shadow p-3 mb-2 rounded-lg readonly" placeholder="MASUKKAN NAMA CUSTOMER"
+            <input type="text" name="nama" class="form-control shadow p-3 mb-2 rounded-lg readonly" placeholder="MASUKKAN NAMA CUSTOMER"
               autofocus/>
           </div>
         </div>
@@ -58,16 +63,7 @@
               <input type="text" class="form-control shadow p-3 mb-2 rounded-lg readonly" placeholder="JUMLAH GAS DI GUDANG"/>
             </div>
           </div>
-
-          <div class="form-group">
-            <div class="col-md-2">
-              <label><b>Gas Off Site</b></label>
-            </div>
-            <div class="col-md-8">
-              <input type="text" class="form-control shadow p-3 mb-2 rounded-lg readonly" placeholder="JUMLAH GAS DI CUSTOMER"/>
-            </div>
-          </div>
-
+          
           <div class="form-group">
             <div class="col-md-2">
               <label><b>Keterangan</b></label>
@@ -91,48 +87,24 @@
               </select>
             </div>
           </div>
+          
           <!-- End of status dropdown -->
+        </form>
         <!-- End of form -->
         <div class="button-space">
-          <a href="#" class="main-button modal-link-save"><b>Save</b></a>
+          <button class="btn btn-success" type="submit"><b>Save</b></button>
+          
           <!-- <a href="#" class="edit-btn modal-link-save">Save</a> -->
         </div>
-
+      
         <div class="modal-scs" style="display: none">
           <a href="#"><i class="close far fa-times-circle"></i></a>
           <p class="text-center">Berhasil Menyimpan</p>
         </div>
         <div class="modal-bg-scs" style="display: none"></div>
       </div>
+    
     </div>
   </div>
 </body>
-<script src="assets/js/jquery-2.1.0.min.js"></script>
-<script src="https://kit.fontawesome.com/59bcfd8744.js" crossorigin="anonymous"></script>
-<script>
-  $(document).ready(function () {
-    $(".modal-link-save").click(function () {
-      $(".modal-scs").show();
-      $(".modal-bg-scs").show();
-    });
-    $(".modal-scs .close").click(function () {
-      $(".modal-scs").hide();
-      $(".modal-bg-scs").hide();
-    });
-  });
-
-  let width = screen.width;
-  console.log(width);
-  if (width < 991) {
-    document.getElementById("img");
-    var imageshown = "./assets/images/logo-mob.png";
-  } else {
-    document.getElementById("img");
-    var imageshown = "./assets/images/logo.png";
-  }
-  document.getElementById("img").src = imageshown;
-</script>
-<script src="assets/js/popper.js"></script>
-<script src="assets/js/bootstrap.min.js"></script>
-
-</html>
+@endsection

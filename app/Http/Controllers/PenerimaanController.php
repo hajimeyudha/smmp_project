@@ -7,6 +7,6 @@ use Illuminate\Http\Request;
 class PenerimaanController extends Controller
 {
     function index(){
-        return view('penerimaan');
+        return view('penerimaan.penerimaan');
     }
 }

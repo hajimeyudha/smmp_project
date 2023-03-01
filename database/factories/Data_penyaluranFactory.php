@@ -21,6 +21,7 @@ class Data_penyaluranFactory extends Factory
         $faker = faker::create();
         return [
             'tanggal_penyaluran' =>  $faker->date('Y_m_d'),
+            'tempo_penyaluran'=> $faker->date('Y_m_d'),
             'status_penyaluran' => Arr::random(['LUNAS', 'BELUM LUNAS']),
             'gas_dipesan' => $faker->numberBetween(0, 100),
             'keterangan_penyaluran' => 'FAKERR'

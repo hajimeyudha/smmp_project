@@ -26,6 +26,11 @@ Route::get('/home', function (){
 
 Route::get('/penyaluran', [PenyaluranController::Class, 'index']);
 Route::get('/penyaluran/create', [PenyaluranController::Class, 'createView']);
+Route::post('penyaluran/create/tambah', [PenyaluranController::Class, 'tambah']);
+Route::get('/penyaluran/update', [PenyaluranController::Class, 'updateView']);
+
+
+
 Route::get('/penerimaan', [PenerimaanController::Class, 'index']);
 Route::get('/laporan', [LaporanController::Class, 'index']);
 Route::get('/order', [OrderController::Class, 'index']);

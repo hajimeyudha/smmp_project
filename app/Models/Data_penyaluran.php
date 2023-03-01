@@ -11,4 +11,5 @@ class Data_penyaluran extends Model
 
     protected $table = 'data_penyaluran';
     protected $primaryKey = 'id_data_penyaluran';
+    protected $fillable = ['tanggal_penyaluran', 'tempo_penyaluran', 'status_penyaluran', 'gas_dipesan', 'keterangan_penyaluran'];
 }
