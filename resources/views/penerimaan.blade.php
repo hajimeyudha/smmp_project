@@ -5,72 +5,74 @@
 
 @section('content')
   <!--  -->
-  <div class="row top-mini-nav">
-    <div class="box-judul">
-      <img src="./assets/images/check.png" />
-      <p class="judul">Rekapitulasi Penyaluran</p>
-    </div>
-    <div class="color-btn">
-      <div class="col-lg-3 col-sm-2 btn"><a class="mini-button" id="info-1">LPG 3 KG</a></div>
-      <div class="col-lg-3 col-sm-2 btn"><a class="mini-button" id="info-2">BG 5,5 KG</a></div>
-      <div class="col-lg-3 col-sm-2 btn"><a class="mini-button" id="info-3">BG 12 KG</a></div>
-      <div class="col-lg-3 col-sm-2 btn"><a class="mini-button" id="info-4">LPG 12 KG</a></div>
-      <div class="col-lg-3 col-sm-2 btn"><a class="mini-button" id="info-5">LPG 50 KG</a></div>
-    </div>
-  </div>
-
-  <section class="section bg-setting" id="edit">
-    <div class="row mx-5" id="mini-wrap">
-
-      <div id="date-input">
-        <div class="input-group date" style="border-radius: 50px;">
-          <input class="form-control" type="text" name="dob" id="dob" placeholder="2022-01" value="">
-          <span class="input-group-prepend">
-            <span class="input-group-text">
-              <i class="fas fa-calendar-alt" onclick="setDatepicker(this)">
-              </i>
-            </span>
-          </span>
+<!--  -->
+<div class="row top-mini-nav">
+  <div class="color-btn">
+      <div class="box-judul">
+          <img class="judulGambar" src="{{asset('images/check.png')}}" />
+          <p class="judul judulRekap">Rekapitulasi Penerimaan</p>
+      </div>
+      <div class="col-sm-1 btn"><a class="mini-button" id="info-1">LPG 3 KG</a></div>
+      <div class="col-sm-1 btn"><a class="mini-button" id="info-2">BG 5,5 KG</a></div>
+      <div class="col-sm-1 btn"><a class="mini-button" id="info-3">BG 12 KG</a></div>
+      <div class="col-sm-1 btn"><a class="mini-button" id="info-4">LPG 12 KG</a></div>
+      <div class="col-sm-1 btn"><a class="mini-button" id="info-5">LPG 50 KG</a></div>
+      <div class="input-group mb-3" style="width: 220px">
+          <div class="input-group-prepend">
+            <span class="input-group-text textSearch" id="basic-addon1">@</span>
+          </div>
+          <input type="text" class="form-control tanggalDisini" placeholder="Tanggal" aria-label="Username" aria-describedby="basic-addon1">
         </div>
+  </div>
+</div>
+
+<section class="section bg-setting" id="edit">
+  <div class="row mx-5 mini-wrap" id="mini-wrap">
+      <div id="date-input">
+          <div class="input-group date kontrolDate" style="border-radius: 50px, width: 100px;">
+              <input class="form-control tanggal" type="text" name="dob" id="dob" placeholder="2022-01" value="">
+              <span class="input-group-prepend">
+                  <span class="input-group-text tanggalTeks">
+                      <i class="fas fa-calendar-alt" onclick="setDatepicker(this)">
+                      </i>
+                  </span>
+              </span>
+          </div>
       </div>
 
       <a href="#">
-        <div class="mini-box" id="flex">
-          <p>LPG 3 KG</p>
-        </div>
+          <div class="mini-box" id="flex">
+              <p>LPG 3 KG</p>
+          </div>
       </a>
 
-
       <div class="dropdown">
-
-        <button type="button" id="btn-download" class="btn dropdown-toggle" data-toggle="dropdown">
-          Download Bentuk
-          <a href="javascript:void(0);" class="icon">
-            <!-- <i onclick="myFunction(this)"class="fa fa-arrow-down"></i> -->
-            <img src="./assets/images/arrow-down-download.png" onclick="myFunction(this)" />
-          </a>
-        </button>
-
-        <div class="dropdown-menu download">
-          <div class="select-download">
-            <img src="./assets/images/kiri.png" class="pl-2" />
-            <a class="dropdown-item modal-link">PDF</a>
+          <button type="button" id="btn-download" class="btn dropdown-toggle download" data-toggle="dropdown">
+              Download Bentuk
+              <a href="javascript:void(0);" class="icon">
+                  <!-- <i onclick="myFunction(this)"class="fa fa-arrow-down"></i> -->
+                  <img src="{{asset('images/arrow-down-download.png')}}" onclick="myFunction(this)" />
+              </a>
+          </button>
+          <div class="dropdown-menu download">
+              <div class="select-download">
+                  <img src="./assets/images/kiri.png" class="pl-2" />
+                  <a class="dropdown-item modal-link">PDF</a>
+              </div>
+              <div class="select-download">
+                  <img src="./assets/images/kiri.png" class="pl-2" />
+                  <a class="dropdown-item modal-link">Excel</a>
+              </div>
           </div>
-          <div class="select-download">
-            <img src="./assets/images/kiri.png" class="pl-2" />
-            <a class="dropdown-item modal-link">Excel</a>
-          </div>
-        </div>
-
       </div>
 
-    </div>
+  </div>
 
-    <div class="modal-scs" style="display: none;">
+  <div class="modal-scs" style="display: none;">
       <a href="#"><i class="close far fa-times-circle"></i></a>
       <p class="text-center">Berhasil Mengunduh</p>
-    </div>
-    <div class="modal-bg-scs" style="display: none;"></div>
+  </div>
+  <div class="modal-bg-scs" style="display: none;"></div>
 
     <div class="edit-table">
       <table>

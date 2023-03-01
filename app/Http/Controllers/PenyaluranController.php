@@ -12,4 +12,8 @@ class PenyaluranController extends Controller
         $Data_penyaluran = Data_penyaluran::all();
         return view('penyaluran', ['ListPenyaluran' => $Data_penyaluran]);
     }
+
+    function createView(){
+        return view('penyaluran-create-admin');
+    }
 }

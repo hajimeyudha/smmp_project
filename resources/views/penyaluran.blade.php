@@ -134,7 +134,7 @@
                     <th rowspan="1">Action</th>
                 </tr>
                 <tr>
-                    <td><a href="karyawan-penerimaan.html" class="edit-button"
+                    <td><a href="penyaluran/create" class="edit-button"
                         style="background-color: #3DE22E; color:#000;">CREATE</a></td>
                 </tr>
                 @foreach ($ListPenyaluran as $item)

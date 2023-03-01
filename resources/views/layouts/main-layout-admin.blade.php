@@ -48,7 +48,7 @@
             </li>
             <li class="scroll-to-section"><a href="/laporan">Laporan</a></li>
             <li class="scroll-to-section">
-              <a href="/kontak">Kontak</a>
+              <a href="/home#footer-upper">Kontak</a>
             </li>
             <li class="submenu">
               <a href="javascript:;">Admin</a>
