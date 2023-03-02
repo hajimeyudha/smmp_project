@@ -27,7 +27,10 @@ Route::get('/home', [HomeController::Class, 'index']);
 Route::get('/penyaluran', [PenyaluranController::Class, 'index']);
 Route::get('/penyaluran/create', [PenyaluranController::Class, 'createView']);
 Route::post('/tambah', [PenyaluranController::Class, 'tambah']);
-Route::get('/penyaluran/update', [PenyaluranController::Class, 'updateView']);
+Route::get('/penyaluran/update/{id}', [PenyaluranController::Class, 'updateView']);
+Route::get('/penyaluran/update/ubah/{id}', [PenyaluranController::Class, 'ubah']);
+Route::get('/penyaluran/delete/{id}', [PenyaluranController::Class, 'delete']);
+
 
 
 

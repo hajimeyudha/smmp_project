@@ -117,5 +117,4 @@
   <script src="{{asset('js/custom.js')}}"></script>
   @yield('tambahanFoot')
 </body>
-
 </html>

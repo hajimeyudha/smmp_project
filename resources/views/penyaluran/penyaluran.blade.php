@@ -130,8 +130,8 @@
                         <td>{{ date('d-m-Y', strtotime($item->tempo_penyaluran)) }}</td>
                         <td>{{ $item->gas_dipesan }}</td>
                         <td>{{ $item->keterangan_penyaluran }}</td>
-                        <td><a href="penyaluran/update" class="modal-link-kary edit-button"><b>UPDATE</b></a>
-                            <a href="penyaluran/cancel" class="modal-link-kary edit-button cancel"><b>CANCEL</b></a>
+                        <td><a href="<?php echo url("/penyaluran/update/{$item->id_data_penyaluran}");?>" class="modal-link-kary edit-button"><b>UPDATE</b></a>
+                            <a href="<?php echo url("/penyaluran/delete/{$item->id_data_penyaluran}");?>" class="modal-link-kary edit-button cancel"><b>DELETE</b></a>
                         </td>
                     </tr>
                 @endforeach
