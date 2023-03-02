@@ -41,10 +41,11 @@
     <div class="welcome-area" id="welcome-first">
         <div class="login-screen">
             <div class="title">
-                <img src="./assets/images/sm.png">
+                <img src="{{ asset('images/sm.png') }}">
                 <h5><b>PT SUBUR MAKMUR MIGAS PRATAMA</b></h5>
             </div>
-            <h5 class="grey-text">Welcome Back</h5>
+            <h5 class="grey-text">Welcome</h5>
+            
             <form action="/login" method="POST">
                 @csrf
                 <div class="form-group">
@@ -63,6 +64,7 @@
                     <button name="submit" type="submit" class="btn btn-danger">Login</button>
                 </div>
             </form>
+            
             <a href="forgot-password.html">
                 <h5 class="forgot-pass">Forgot password ?</h5>
             </a>

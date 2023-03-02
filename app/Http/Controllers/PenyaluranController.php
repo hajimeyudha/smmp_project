@@ -57,7 +57,56 @@ class PenyaluranController extends Controller
     }
 
     function tambah(Request $request){
-        $post = new Data_penyaluran;
+        $validated = $request->validate([
+            'statusPembayaran' => 'required',
+            'tanggalOrder' => 'required',
+            'tanggalTempo' => 'required',
+            'gasDipesan' => 'required',
+            'keterangan' => 'required',
+            'statusPemesanan' => 'required'
+        ], [
+            'nama.required' => 'nama wajib',
+            'statusPembayaran.required' => 'status pembayaran wajib diisi',
+            'tanggalOrder.required' => 'tanggal order wajib diisi',
+            'tanggalTempo.required' => 'tanggal tempo wajib diisi',
+            'gasDipesan.required' => 'gas dipesan wajib diisi',
+            'keterangan.required' => 'keterangan wajib diisi',
+            'statusPemesanan.required' => 'status pemesanan wajib diisi'
+        ]
+        );
+
+        $createPenyaluran = [
+            'nama' => $request->nama,
+            'statusPembayaran' => $request->statusPembayaran,
+            'tanggalOrder' => $request->tanggalOrder,
+            'tanggalTempo' => $request->tanggalTempo,
+            'gasDipesan' => $request->gasDipesan,
+            'keterangan' => $request->keterangan,
+            'statusPemesanan' => $request->statusPemesanan
+        ];
+
+        $nama = $request->nama;
+        $statusPembayaran = $request->statusPembayaran;
+        $gasDipesan = $request->gasDipesan;
+        $keterangan = $request->statusPemesanan;
+        //Pengaturan Tanggal
+        $TanggalAwal1 = $request->tanggalOrder;
+        $tanggalFix1 = strtotime($TanggalAwal1);
+        $Tanggal = date('Y-m-d',$tanggalFix1);
+        $TanggalAwal2 = $request->tanggalTempo;
+        $tanggalFix2 = strtotime($TanggalAwal2);
+        $Tanggal2 = date('Y-m-d',$tanggalFix2);
+
+        //Tambah data
+
+        Data_penyaluran::create([
+                'tanggal_penyaluran' =>  $Tanggal,
+                'tempo_penyaluran'=> $Tanggal2,
+                'status_penyaluran' =>  $statusPembayaran,
+                'gas_dipesan' =>  $gasDipesan,
+                'keterangan_penyaluran' => $keterangan
+            ]);
+        return redirect('/penyaluran')->with(['sukses => berhasil tambah data']);
         
     }
 

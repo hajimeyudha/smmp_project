@@ -26,7 +26,7 @@ Route::get('/logout', [SessionController::class, 'logout']);
 Route::get('/home', [HomeController::Class, 'index']);
 Route::get('/penyaluran', [PenyaluranController::Class, 'index']);
 Route::get('/penyaluran/create', [PenyaluranController::Class, 'createView']);
-Route::post('penyaluran/create/tambah', [PenyaluranController::Class, 'tambah']);
+Route::post('/tambah', [PenyaluranController::Class, 'tambah']);
 Route::get('/penyaluran/update', [PenyaluranController::Class, 'updateView']);
 
 
