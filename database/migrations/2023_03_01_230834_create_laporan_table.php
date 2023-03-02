@@ -14,7 +14,14 @@ return new class extends Migration
     public function up()
     {
         Schema::create('laporan', function (Blueprint $table) {
-            $table->id();
+            $table->id('id_laporan');
+            $table->date('tanggal_laporan')->required();
+            $table->integer('uang_masuk')->nullable();
+            $table->integer('uang_keluar')->nullable();
+            $table->integer('saldo')->nullable();
+            $table->string('keterangan_laporan')->nullable();
+            $table->string('nota_laporan')->nullable();
+            $table->unsignedBigInteger('id_user')->nullable();
             $table->timestamps();
         });
     }

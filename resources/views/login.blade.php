@@ -65,9 +65,9 @@
                 </div>
             </form>
             
-            <a href="forgot-password.html">
+            {{-- <a href="forgot-password.html">
                 <h5 class="forgot-pass">Forgot password ?</h5>
-            </a>
+            </a> --}}
         </div>
     </div>
 </body>

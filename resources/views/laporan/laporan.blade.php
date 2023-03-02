@@ -109,20 +109,24 @@
                     <th rowspan="2">Uang Keluar</th>
                     <th rowspan="2">Saldo</th>
                     <th rowspan="2">Keterangan</th>
-                    <th rowspan="2">Nota</th>
                     <th>Action</th>
                 </tr>
                 <tr>
-                    <td>create</td>
+                    <td><a href="laporan/create" class="edit-button"
+                            style="background-color: #3DE22E; color:#000;"><b>CREATE</b></a></td>
                 </tr>
-                <tr>
-                    <td>23</td>
-                    <td>23</td>
-                    <td>23</td>
-                    <td>23</td>
-                    <td>23</td>
-                    <td>23</td>
-                </tr>
+                @foreach ($ListLaporan as $item)
+                    <tr>
+                        <td>{{ date('d-m-Y', strtotime($item->tanggal_laporan)) }}</td>
+                        <td>{{ $item->uang_masuk }}</td>
+                        <td>{{ $item->uang_keluar }}</td>
+                        <td>{{ $item->saldo }}</td>
+                        <td>{{ $item->keterangan_laporan }}</td>
+                        <td><a href="<?php echo url("/laporan/update/{$item->id_data_laporan}");?>" class="modal-link-kary edit-button laporan"><b>UPDATE</b></a>
+                            <a href="<?php echo url("/laporan/delete/{$item->id_data_laporan}");?>" class="modal-link-kary edit-button cancel"><b>DELETE</b></a>
+                        </td>
+                    </tr>
+                @endforeach
             </table>
         </div>
         <!-- <div class="edit">

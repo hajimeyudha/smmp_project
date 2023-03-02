@@ -20,10 +20,12 @@ class Data_penerimaanFactory extends Factory
     {
         $faker = faker::create();
         return [
-            'tanggal_penerimaan' =>  $faker->date('Y_m_d'),
-            'status_penerimaan' => Arr::random(['LUNAS', 'BELUM LUNAS']),
-            'gas_dipesan' => $faker->numberBetween(0, 100),
-            'keterangan_penerimaan' => 'FAKERR'
+            'status_penerimaan' => Arr::random(['AKTIF', 'SELESAI', 'PENDING']),
+            'bulan_penerimaan' => Arr::random(['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember']),
+            'minggu_1' =>  $faker->numberBetween(0, 100),
+            'minggu_2' =>  $faker->numberBetween(0, 100),
+            'minggu_3' =>  $faker->numberBetween(0, 100),
+            'minggu_4' =>  $faker->numberBetween(0, 100),
         ];
     }
 }

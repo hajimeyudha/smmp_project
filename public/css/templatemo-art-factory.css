@@ -1683,6 +1683,11 @@ td {
     transition: all 0.3s ease 0s;
 }
 
+.laporan {
+    background-color:  #FFC700;
+    color: #000;
+}
+
 #edit {
     top: 0;
     min-height: 93vh;
@@ -2240,6 +2245,7 @@ a.mini-nav-button {
     -webkit-box-shadow: 1px 3px 9px -2px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 1px 3px 9px -2px rgba(0, 0, 0, 0.75);
 }
+
 
 /* Clearfix buat float */
 
