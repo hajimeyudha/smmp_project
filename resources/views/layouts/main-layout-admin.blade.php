@@ -54,7 +54,7 @@
               <a href="javascript:;">Admin</a>
               <ul>
                 <div class="row" style="background-color:  #E7DDDD">
-                  <li><a href="/penyaluran">Logout</a></li>
+                  <li><a href="/logout">Logout</a></li>
                 </div>
               </ul>
             </li>   

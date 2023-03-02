@@ -14,6 +14,7 @@ class PenyaluranController extends Controller
     protected $Data_penyaluranModel;
 
     function __construct(){
+        $this->middleware('auth');
         // Eloquent
         $this->PenyaluranModel = Penyaluran::all();
         $this->Data_penyaluranModel = Data_penyaluran::cursorPaginate(10);
@@ -56,7 +57,8 @@ class PenyaluranController extends Controller
     }
 
     function tambah(Request $request){
-        echo "Nama" . $request->nama;
+        $post = new Data_penyaluran;
+        
     }
 
     function updateView(){

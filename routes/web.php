@@ -1,10 +1,12 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\PenyaluranController;
-use App\Http\Controllers\PenerimaanController;
-use App\Http\Controllers\LaporanController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\OrderController;
+use App\Http\Controllers\LaporanController;
+use App\Http\Controllers\SessionController;
+use App\Http\Controllers\PenerimaanController;
+use App\Http\Controllers\PenyaluranController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,14 +18,12 @@ use App\Http\Controllers\OrderController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/', function (){
-    return view('home');
-});
+Route::get('/', [SessionController::class, 'index']);
+Route::post('/login', [SessionController::class, 'login']);
+Route::get('/logout', [SessionController::class, 'logout']);
 
-Route::get('/home', function (){
-    return view('home');
-});
 
+Route::get('/home', [HomeController::Class, 'index']);
 Route::get('/penyaluran', [PenyaluranController::Class, 'index']);
 Route::get('/penyaluran/create', [PenyaluranController::Class, 'createView']);
 Route::post('penyaluran/create/tambah', [PenyaluranController::Class, 'tambah']);

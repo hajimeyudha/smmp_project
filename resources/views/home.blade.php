@@ -4,6 +4,12 @@
 @section('title', 'Tentang Kami')
 {{-- CONTENT START --}}
 @section('content')
+@if ($message = Session::get('sukses'))
+<div class="alert alert-success alert-block">
+    <button type="button" class="close" data-dismiss="alert">×</button>
+    <strong>{{ $message }}</strong>
+</div>
+@endif
   <section class="section" id="home">
     <div class="container">
       <div class="row">
