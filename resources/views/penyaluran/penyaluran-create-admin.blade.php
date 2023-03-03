@@ -8,7 +8,7 @@
     <body>
         <div class="welcome-area" id="welcome-first">
             <div class="create-screen">
-                <a href="Admin-create-penyaluran.html"><i class="close far fa-times-circle"></i></a>
+                <a href="/penyaluran"><i class="close far fa-times-circle"></i></a>
                 <h5 class="text-center" style="margin-bottom: 2rem">
                     Create Admin Penyaluran
                 </h5>

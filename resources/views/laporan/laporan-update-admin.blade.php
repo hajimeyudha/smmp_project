@@ -9,79 +9,41 @@
 
         <div class="welcome-area" id="welcome-first">
             <div class="create-screen">
-                <a href="/penyaluran"><i class="close far fa-times-circle"></i></a>
+                <a href="/laporan"><i class="close far fa-times-circle"></i></a>
                 <h5 class="text-center" style="margin-bottom: 2rem">
-                    Update Admin Penyaluran
+                    Update Admin Laporan
                 </h5>
-                <form action="<?php echo url("/penyaluran/update/ubah/{$data->id_data_penyaluran}");?>">
+                <form action="<?php echo url("/laporan/update/ubah/{$data->id_laporan}");?>">
                   @csrf
                 <div class="form-input">
                     <div class="form-group">
                         <div class="col-md-2">
-                            <label><b>Id Registrasi</b></label>
-                        </div>
-                        <div class="col-md-8">
-                            <input type="text" value="{{ $data->id_data_penyaluran }}"
-                                class="form-control shadow p-3 mb-2 rounded-lg" disabled placeholder="ID" />
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="col-md-2">
-                            <label><b>Nama</b></label>
-                        </div>
-                        <div class="col-md-8">
-                            <input type="text" class="form-control shadow p-3 mb-2 rounded-lg readonly"  name="nama" id="nama" value="CV INDOPERTA"
-                                placeholder="CV INDOPERTA" disabled/>
-                        </div>
-                    </div>
-                    <!-- Status Dropdown -->
-                    <div class="form-group">
-                        <div class="col-md-2">
-                            <label><b>Status</b></label>
-                        </div>
-                        <div class="col-md-8">
-                            <select name="status" id="status" class="custom-select shadow bg-white rounded-lg" id="inputGroupSelect01" required>
-                                <option>PILIH STATUS TRANSAKSI</option>
-                                <option selected value="AKTIF">AKTIF</option>
-                                <option value="SELESAI">SELESAI</option>
-                            </select>
-                        </div>
-                    </div>
-                    <!-- End of status dropdown -->
-                    <div class="form-group">
-                        <div class="col-md-2">
-                            <label><b>Tanggal Order</b></label>
+                            <label><b>Tanggal Laporan</b></label>
                         </div>
                         <div class="col-md-8">
                             <?php
-                            $date = $data->tanggal_penyaluran;
+                            $date = $data->tanggal_laporan;
                             $date2 = strtotime($date);
                             $date3 = date('Y-m-d', $date2);
                             ?>
-                            <input name="tanggalOrder" id="tanggalOrder" type="date" value="{{ $date3 }}"
+                            <input name="tanggal_laporan" id="tanggal_laporan" type="date" value="{{ $date3 }}"
                                 class="form-control shadow p-3 mb-2 rounded-lg" placeholder="MASUKKAN BULAN" />
                         </div>
                     </div>
                     <div class="form-group">
                         <div class="col-md-2">
-                            <?php
-                            $date = $data->tempo_penyaluran;
-                            $date2 = strtotime($date);
-                            $date3 = date('Y-m-d', $date2);
-                            ?>
-                            <label><b>Tanggal Jatuh Tempo</b></label>
+                            <label><b>Uang Masuk</b></label>
                         </div>
                         <div class="col-md-8">
-                            <input type="date" name="tanggalTempo" id="tanggalTempo" class="form-control shadow p-3 mb-2 rounded-lg"
-                            value="{{ $date3 }}" placeholder="MASUKKAN BULAN" />
+                            <input type="text" name="uang_masuk" id="uang_masuk" value="{{ $data->uang_masuk }}" class="form-control shadow p-3 mb-2 bg-white rounded-lg" />
                         </div>
                     </div>
                     <div class="form-group">
                         <div class="col-md-2">
-                            <label><b>Jumlah Pesanan</b></label>
+                            <label><b>Uang Keluar</b></label>
                         </div>
                         <div class="col-md-8">
-                            <input type="text" name="gasDipesan" id="gasDipesan" value="{{ $data->gas_dipesan }}" class="form-control shadow p-3 mb-2 bg-white rounded-lg" />
+                            <input type="text" name="uang_keluar" id="uang_keluar" value="{{ $data->uang_keluar }}" class="form-control shadow p-3 mb-2 bg-white rounded-lg" />
                         </div>
                     </div>
                     <div class="form-group">
@@ -89,7 +51,7 @@
                             <label><b>Keterangan</b></label>
                         </div>
                         <div class="col-md-8">
-                            <input type="textarea" name="keterangan" id="keterangan" value="{{ $data->keterangan_penyaluran }}"  class="form-control shadow p-3 mb-2 bg-white rounded-lg" />
+                            <input type="textarea" name="keterangan_laporan" id="keterangan_laporan" value="{{ $data->keterangan_laporan }}"  class="form-control shadow p-3 mb-2 bg-white rounded-lg" />
                         </div>
                     </div>
                     <div class="button-space">

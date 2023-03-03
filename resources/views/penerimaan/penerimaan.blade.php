@@ -72,9 +72,9 @@
     <section class="section bg-setting" id="edit">
         <div class="container">
             <div class="row atasan">
-                <div class="col-md-4">
+                {{-- <div class="col-md-4">
                     <input type="number" min="2023" max="2199" step="1" value="2023" />
-                </div>
+                </div> --}}
                 <button class="col-sm-2 btn btn-light tombolLPG"><b>LPG 3 KG</b></button>
                 <div class="col-sm-2">
                     <div class="dropdown">

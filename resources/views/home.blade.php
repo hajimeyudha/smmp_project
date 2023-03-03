@@ -55,7 +55,7 @@
   <!-- ***** Features Big Item End ***** -->
 
   <!-- section gas info -->
-  <section class="section" id="gas-info">
+  {{-- <section class="section" id="gas-info">
     <div class="container">
       
       <div class="col d-flex justify-content-center">
@@ -69,7 +69,7 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> --}}
 
   <!-- ATASNYA FOOTER -->
   <section class="section" id="footer-upper">
@@ -77,16 +77,16 @@
       <div class="footer-upper">
         <p class="follow">Follow us!</p>
         <img src="{{asset('images/linkedin.png')}}" alt="" class="linkedin img-responsive text-center" width="80px" />
-        <p class="company">PT Subur Makmur Migas Pratama</p>
+        <a href="#" class="company">PT Subur Makmur Migas Pratama</a>
 
         <div class="kontakBungkus">
           <p class="contact">Contact us!</p>
           <div class="kontak1">
-            <img src="assets/images/whatsapp.png" alt="" class="whatsapp img-fluid rounded" />
+            <img src="{{asset('images/whatsapp.png')}}" alt="" class="whatsapp img-fluid rounded" />
             <a href="wa.me/#" class="aditya">Aditya Chandra Suparman</a>
           </div>
           <div class="kontak2">
-            <img src="assets/images/whatsapp.png" alt="" class="whatsapp2" />
+            <img src="{{asset('images/whatsapp.png')}}" alt="" class="whatsapp2" />
             <a href="wa.me/#" class="sadullah">Sadullah</a>
           </div>
         </div>

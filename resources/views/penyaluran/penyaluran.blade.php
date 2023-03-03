@@ -72,10 +72,10 @@
     <section class="section bg-setting" id="edit">
         <div class="container">
             <div class="row atasan">
-                <div class="col-sm-4">
+                {{-- <div class="col-sm-4">
                     <input type="date" class="form-control shadow p-3 mb-2 bg-white rounded-lg"
                         placeholder="MASUKKAN TANGGAL PEMESANAN" required />
-                </div>
+                </div> --}}
                 <button class="col-sm-2 btn btn-light tombolLPG"><b>LPG 3 KG</b></button>
                 <div class="col-sm-2">
                     <div class="dropdown">

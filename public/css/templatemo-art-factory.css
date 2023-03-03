@@ -1475,7 +1475,8 @@ preloader
     height: 200px;
     width: 100%;
     overflow: hidden;
-    background-color: #f0eeee;
+    /* background-color: #f0eeee; */
+    background-color: #fff;
 }
 
 .follow {
@@ -1904,6 +1905,10 @@ a.mini-nav-button {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.judulin{
+    margin: 20px;
 }
 
 .judulGambar {

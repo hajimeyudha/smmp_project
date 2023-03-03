@@ -50,28 +50,28 @@
     <!--  -->
     <div class="row top-mini-nav">
         <div class="color-btn">
-            <div class="box-judul">
-                <img class="judulGambar" src="{{ asset('images/check.png') }}" />
-                <p class="judul judulRekap">Rekapitulasi Laporan Keuangan</p>
+            <div class="box-judul judulon">
+                {{-- <img class="judulGambar judulan" src="{{ asset('images/check.png') }}" /> --}}
+                <p class="judul judulRekap judulin">Rekapitulasi Laporan Keuangan</p>
             </div>
 
-            <div class="input-group mb-3" style="width: 220px">
+            {{-- <div class="input-group mb-3" style="width: 220px">
                 <div class="input-group-prepend">
                     <span class="input-group-text textSearch" id="basic-addon1">@</span>
                 </div>
                 <input type="text" name="cari" class="form-control tanggalDisini" placeholder="Cari Data"
                     aria-label="cari" aria-describedby="basic-addon1">
-            </div>
+            </div> --}}
         </div>
     </div>
 
     <section class="section bg-setting" id="edit">
         <div class="container">
             <div class="row atasan">
-                <div class="col-sm-4">
+                {{-- <div class="col-sm-4">
                     <input type="date" class="form-control shadow p-3 mb-2 bg-white rounded-lg"
                         placeholder="MASUKKAN TANGGAL PEMESANAN" required />
-                </div>
+                </div> --}}
                 <button class="col-sm-2 btn btn-light tombolLPG"><b>LPG 3 KG</b></button>
                 <div class="col-sm-2">
                     <div class="dropdown">
@@ -107,7 +107,7 @@
                     <th rowspan="2">Tanggal</th>
                     <th rowspan="2">Uang Masuk</th>
                     <th rowspan="2">Uang Keluar</th>
-                    <th rowspan="2">Saldo</th>
+                    <th rowspan="2">Total Uang</th>
                     <th rowspan="2">Keterangan</th>
                     <th>Action</th>
                 </tr>
@@ -117,13 +117,14 @@
                 </tr>
                 @foreach ($ListLaporan as $item)
                     <tr>
+                        
                         <td>{{ date('d-m-Y', strtotime($item->tanggal_laporan)) }}</td>
-                        <td>{{ $item->uang_masuk }}</td>
-                        <td>{{ $item->uang_keluar }}</td>
-                        <td>{{ $item->saldo }}</td>
+                        <td>Rp {{ number_format($item->uang_masuk) }}</td>
+                        <td>Rp {{ number_format($item->uang_keluar) }}</td>
+                        <td>Rp {{ number_format($item->saldo) }}</td>
                         <td>{{ $item->keterangan_laporan }}</td>
-                        <td><a href="<?php echo url("/laporan/update/{$item->id_data_laporan}");?>" class="modal-link-kary edit-button laporan"><b>UPDATE</b></a>
-                            <a href="<?php echo url("/laporan/delete/{$item->id_data_laporan}");?>" class="modal-link-kary edit-button cancel"><b>DELETE</b></a>
+                        <td><a href="<?php echo url("/laporan/update/{$item->id_laporan}");?>" class="modal-link-kary edit-button laporan"><b>UPDATE</b></a>
+                            <a href="<?php echo url("/laporan/delete/{$item->id_laporan}");?>" class="modal-link-kary edit-button cancel"><b>DELETE</b></a>
                         </td>
                     </tr>
                 @endforeach
