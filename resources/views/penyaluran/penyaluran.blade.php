@@ -59,13 +59,13 @@
             <div class="col-sm-1 btn"><a class="mini-button" id="info-3">BG 12 KG</a></div>
             <div class="col-sm-1 btn"><a class="mini-button" id="info-4">LPG 12 KG</a></div>
             <div class="col-sm-1 btn"><a class="mini-button" id="info-5">LPG 50 KG</a></div>
-            <div class="input-group mb-3" style="width: 220px">
+            {{-- <div class="input-group mb-3" style="width: 220px">
                 <div class="input-group-prepend">
                     <span class="input-group-text textSearch" id="basic-addon1">@</span>
                 </div>
                 <input type="text" name ="cari" class="form-control tanggalDisini" placeholder="Cari Data" aria-label="cari"
                     aria-describedby="basic-addon1">
-            </div>
+            </div> --}}
         </div>
     </div>
 

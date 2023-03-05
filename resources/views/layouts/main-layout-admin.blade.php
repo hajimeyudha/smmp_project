@@ -24,10 +24,13 @@
     <header class="header-area header-sticky">
       <div class="container">
         <nav class="main-nav">
-          <a href="/home#home"><img class="logo_smmp" src="{{asset('images/sm.png')}}" /></a>
-          <a href="/home#home" class="logo">PT SUBUR MAKMUR MIGAS PRATAMA</a>
-          <p class="logo_lokasi"><span>Kabupaten Demak, Jawa Tengah</span></p>
-          <ul class="nav">
+          <div class="classdiv">
+            <a href="/home#home"><img class="logo_smmp" src="{{asset('images/sm.png')}}" /></a>
+            <a href="/home#home" class="logo">PT SUBUR MAKMUR MIGAS PRATAMA</a>
+            <p class="logo_lokasi"><span>Kabupaten Demak, Jawa Tengah</span></p>
+          </div>
+          <ul class="nav navya">
+            <div class="classnav"></div>
             <div class="box-nav">
               <i class="fas fa-home"></i>
               <li class="scroll-to-section" id="home-nav">
@@ -51,7 +54,7 @@
               <a href="/home#footer-upper">Kontak</a>
             </li>
             <li class="submenu">
-              <a href="javascript:;">Admin</a>
+              <a href="javascript:;">{{auth()->user()->name}}</a>
               <ul>
                 <div class="row" style="background-color:  #E7DDDD">
                   <li><a href="/logout">Logout</a></li>

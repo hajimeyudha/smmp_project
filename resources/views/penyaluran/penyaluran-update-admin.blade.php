@@ -42,8 +42,8 @@
                         <div class="col-md-8">
                             <select name="status" id="status" class="custom-select shadow bg-white rounded-lg" id="inputGroupSelect01" required>
                                 <option>PILIH STATUS TRANSAKSI</option>
-                                <option selected value="AKTIF">AKTIF</option>
-                                <option value="SELESAI">SELESAI</option>
+                                <option selected value="LUNAS">LUNAS</option>
+                                <option value="BELUM LUNAS">BELUM LUNAS</option>
                             </select>
                         </div>
                     </div>
