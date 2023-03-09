@@ -130,120 +130,123 @@
                         <td>{{ date('d-m-Y', strtotime($item->tempo_penyaluran)) }}</td>
                         <td>{{ $item->gas_dipesan }}</td>
                         <td>{{ $item->keterangan_penyaluran }}</td>
-                        <td><a href="<?php echo url("/penyaluran/update/{$item->id_data_penyaluran}");?>" class="modal-link-kary edit-button"><b>UPDATE</b></a>
-                            <a href="<?php echo url("/penyaluran/delete/{$item->id_data_penyaluran}");?>" class="modal-link-kary edit-button cancel"><b>DELETE</b></a>
-                        </td>
-                    </tr>
-                @endforeach
-            </table>
-            <br>
-            {{ $ListPenyaluran->links() }}
-        </div>
-        <!-- <div class="edit">
+                        @if (Auth::user()->role === 'admin')
+                            <td><a href="<?php echo url("/penyaluran/update/{$item->id_data_penyaluran}"); ?>" class="modal-link-kary edit-button"><b>UPDATE</b></a>
+                            <a href="<?php echo url("/penyaluran/delete/{$item->id_data_penyaluran}"); ?>" class="modal-link-kary edit-button cancel"><b>DELETE</b></a>
+                            </td>
+                        @else
+                            <td><a href="<?php echo url("/penyaluran/update/{$item->id_data_penyaluran}"); ?>" class="modal-link-kary edit-button"><b>UPDATE</b></a>
+                    @endif
+            @endforeach
+        </table>
+        <br>
+        {{ $ListPenyaluran->links() }}
+    </div>
+    <!-- <div class="edit">
                           <a href="#" class="edit-btn modal-link-save">Save</a>
                         </div> -->
-    </section>
+</section>
 @endsection
 
 
 @section('tambahanFoot')
 
-    <div class="modal-scs" style="display: none;">
-        <a href="#"><i class="close far fa-times-circle"></i></a>
-        <p class="text-center">Berhasil Menyimpan</p>
-    </div>
-    <div class="modal-bg-scs" style="display: none;"></div>
+<div class="modal-scs" style="display: none;">
+    <a href="#"><i class="close far fa-times-circle"></i></a>
+    <p class="text-center">Berhasil Menyimpan</p>
+</div>
+<div class="modal-bg-scs" style="display: none;"></div>
 
-    <!-- jQuery -->
-    <script src="assets/js/jquery-2.1.0.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://kit.fontawesome.com/59bcfd8744.js" crossorigin="anonymous"></script>
+<!-- jQuery -->
+<script src="assets/js/jquery-2.1.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://kit.fontawesome.com/59bcfd8744.js" crossorigin="anonymous"></script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
-    <!-- <script src="./assets/js/karyawan.js"></script> -->
-    <script>
-        $(document).ready(function() {
-            $('.modal-link-kary').click(function() {
-                console.log('buka');
-                $('.modal-kary').show();
-                $('.modal-bg').show();
-            });
-            $('.modal-kary .close').click(function() {
-                $('.modal-kary').hide();
-                $('.modal-bg').hide();
-            });
-            $('.modal-kary a.main-button').click(function() {
-                $('.modal-kary').hide();
-                $('.modal-bg').hide();
-            })
-        })
-
-        $(document).ready(function() {
-            $('.modal-link').click(function() {
-                console.log('buka');
-                $('.modal-scs').show();
-                $('.modal-bg-scs').show();
-                console.log('modal-bg')
-            });
-            $('.modal-scs .close').click(function() {
-                $('.modal-scs').hide();
-                $('.modal-bg-scs').hide();
-            });
-        })
-
-        $(document).ready(function() {
-            $('.modal-link-save').click(function() {
-                console.log('baru');
-                $('.modal-scs').show();
-                $('.modal-bg-scs').show();
-            });
-            $('.modal-scs-save .close').click(function() {
-                $('.modal-scs').hide();
-                $('.modal-bg-scs').hide();
-            });
-        })
-
-        $(document).ready(function() {
-            $('.modal-link-savee').click(function() {
-                console.log('baru');
-                $('.modal-scs').show();
-                $('.modal-bg-scs').show();
-            });
-            $('.modal-scs-save .close').click(function() {
-                $('.modal-scs').hide();
-                $('.modal-bg-scs').hide();
-            });
-        })
-
-        $(function() {
-            $('#scrollToTop').bind("click", function() {
-                console.log('naik')
-                $('html, body').animate({
-                    scrollTop: 0
-                }, 1200);
-                return false;
-            });
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+<!-- <script src="./assets/js/karyawan.js"></script> -->
+<script>
+    $(document).ready(function() {
+        $('.modal-link-kary').click(function() {
+            console.log('buka');
+            $('.modal-kary').show();
+            $('.modal-bg').show();
         });
+        $('.modal-kary .close').click(function() {
+            $('.modal-kary').hide();
+            $('.modal-bg').hide();
+        });
+        $('.modal-kary a.main-button').click(function() {
+            $('.modal-kary').hide();
+            $('.modal-bg').hide();
+        })
+    })
 
-        function setDatepicker(_this) {
-            let className = $(_this).parent()
-                .parent().parent().attr('class');
-            let removeSpace = className.replace(' ', '.');
-            $("." + removeSpace).datepicker({
-                format: "dd/mm/yyyy",
-                orientation: "bottom auto",
-                autoclose: true,
-                showOnFocus: "false"
-            });
-        }
+    $(document).ready(function() {
+        $('.modal-link').click(function() {
+            console.log('buka');
+            $('.modal-scs').show();
+            $('.modal-bg-scs').show();
+            console.log('modal-bg')
+        });
+        $('.modal-scs .close').click(function() {
+            $('.modal-scs').hide();
+            $('.modal-bg-scs').hide();
+        });
+    })
 
-        var body = document.body,
-            html = document.documentElement;
+    $(document).ready(function() {
+        $('.modal-link-save').click(function() {
+            console.log('baru');
+            $('.modal-scs').show();
+            $('.modal-bg-scs').show();
+        });
+        $('.modal-scs-save .close').click(function() {
+            $('.modal-scs').hide();
+            $('.modal-bg-scs').hide();
+        });
+    })
 
-        var height = Math.max(body.scrollHeight, body.offsetHeight,
-            html.clientHeight, html.scrollHeight, html.offsetHeight);
-        console.log(height);
-    @endsection
+    $(document).ready(function() {
+        $('.modal-link-savee').click(function() {
+            console.log('baru');
+            $('.modal-scs').show();
+            $('.modal-bg-scs').show();
+        });
+        $('.modal-scs-save .close').click(function() {
+            $('.modal-scs').hide();
+            $('.modal-bg-scs').hide();
+        });
+    })
+
+    $(function() {
+        $('#scrollToTop').bind("click", function() {
+            console.log('naik')
+            $('html, body').animate({
+                scrollTop: 0
+            }, 1200);
+            return false;
+        });
+    });
+
+    function setDatepicker(_this) {
+        let className = $(_this).parent()
+            .parent().parent().attr('class');
+        let removeSpace = className.replace(' ', '.');
+        $("." + removeSpace).datepicker({
+            format: "dd/mm/yyyy",
+            orientation: "bottom auto",
+            autoclose: true,
+            showOnFocus: "false"
+        });
+    }
+
+    var body = document.body,
+        html = document.documentElement;
+
+    var height = Math.max(body.scrollHeight, body.offsetHeight,
+        html.clientHeight, html.scrollHeight, html.offsetHeight);
+    console.log(height);
+@endsection

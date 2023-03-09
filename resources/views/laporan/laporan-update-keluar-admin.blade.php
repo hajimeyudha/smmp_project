@@ -41,21 +41,37 @@
                      <!-- Status Dropdown -->
                      <div class="form-group">
                         <div class="col-md-2">
-                            <label><b>Keterangan</b></label>
+                            <label><b>Status</b></label>
                         </div>
                         <div class="col-md-8">
-                            <select name="keterangan_laporan" id="keterangan_laporan" class="custom-select shadow bg-white rounded-lg" id="inputGroupSelect01" required>
-                                <option>PILIH KETERANGAN TRANSAKSI</option>
-                                <option selected value="PENJUALAN BARANG">PENJUALAN BARANG</option>
-                                <option value="SPONSOR">SPONSOR</option>
-                                <option value="RETUR BARANG">RETUR BARANG</option>
+                            <select name="status" id="status" class="custom-select shadow bg-white rounded-lg" id="inputGroupSelect01" required>
+                                <option>PILIH STATUS TRANSAKSI</option>
+                                <option selected value="LUNAS">LUNAS</option>
+                                <option value="BELUM LUNAS">BELUM LUNAS</option>
                             </select>
                         </div>
                     </div>
                     <!-- End of status dropdown -->
+                    <div class="form-group">
+                        <div class="col-md-2">
+                            <label><b>Uang Keluar</b></label>
+                        </div>
+                        <div class="col-md-8">
+                            <input type="text" name="uang_keluar" id="uang_keluar" value="{{ $data->uang_keluar }}" class="form-control shadow p-3 mb-2 bg-white rounded-lg" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-2">
+                            <label><b>Keterangan</b></label>
+                        </div>
+                        <div class="col-md-8">
+                            <input type="textarea" name="keterangan_laporan" id="keterangan_laporan" value="{{ $data->keterangan_laporan }}"  class="form-control shadow p-3 mb-2 bg-white rounded-lg" />
+                        </div>
+                    </div>
                     <div class="button-space">
                       <button class="btn btn-success" type="submit"><b>Save</b></button>
                   </div>
+
                     <div class="modal-scs" style="display: none">
                         <a href="#"><i class="close far fa-times-circle"></i></a>
                         <p class="text-center">Berhasil Menyimpan</p>

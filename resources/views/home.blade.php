@@ -10,71 +10,164 @@
             <strong>{{ $message }}</strong>
         </div>
     @endif
-    <section class="section" id="home">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-7 col-md-12 col-sm-12" data-scroll-reveal="enter left move 30px over 0.6s after 0.4s">
-                    <img src="{{ asset('images/left-image.png') }}" class="rounded img-fluid d-block mx-auto"
-                        alt="App" />
-                </div>
-                <div class="right-text col-lg-5 col-md-12 col-sm-12 mobile-top-fix">
-                    <div class="left-heading">
-                        <h5 class="teks_roman">PT Subur Makmur Migas Pratama</h5>
-                    </div>
-                    <div class="left-text">
-                        <p>
-                            PT Subur Makmur Migas Pratama merupakan distributor gas
-                            Pertamina terbesar domisili Kabupaten Demak yang beralamat di
-                            Jalan Raya Demak, Jepara, Bakung, Mijen, Demak, Jawa Tengah.
-                            Berdiri secara resmi sejak tahun 2013 dan didirikan oleh Bapak
-                            Aditya Chandra Suparman. Sebagai distributor gas terbesar, PT
-                            Subur Makmur Migas Pratama selalu konsisten dalam memberikan
-                            pelayanan kepada konsumen atau pelanggan. Pada proses
-                            distribusinya, produsen tersebut mempercayakan kepada
-                            distributor (dalam hal ini adalah PT Subur Makmur Migas Pratama)
-                            dalam menyalurkan produk kepada pengecer. Selanjutnya, pengecer
-                            tersebut yang akan menyalurkan kepada konsumen akhir.
-                        </p>
-                        <!-- <a href="#stok" class="main-button">Discover More</a> -->
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-12 maps-link">
-                    <a href="https://goo.gl/maps/HF2piHc3RH4HKRJ89" target="_blank"><img
-                            src="{{ asset('images/tangan.png') }}" /></a>
-                    <a href="https://goo.gl/maps/HF2piHc3RH4HKRJ89" target="_blank"><img
-                            src="{{ asset('images/name.png') }}" id="tulisan" /></a>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="hr"></div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- ***** Features Big Item End ***** -->
 
     <!-- section gas info -->
-    <section class="section" id="gas-info">
+    <section class="section" id="stok">
         <div class="container">
-            <div class="col justify-content-center gascard">
-                {{-- card --}}
-                <div class="card" style="width: 18rem;">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                            card's content.</p>
-                        <a href="#" class="card-link">Card link</a>
-                        <a href="#" class="card-link">Another link</a>
-                    </div>
+    <div class="left-heading">
+      <h5 class="text-center">STOK BARANG PT SUBUR MAKMUR MIGAS PRATAMA</h5>
+    </div>
+    <div class="row" id="row1">
+        <div id="container-2" class="sol-1">
+          <div class="solution-details" id="sol1">
+            <img src="{{ asset('images/elpiji-3kg.png')}}" id="lpg3kg" />
+            <hr />
+            <p><b>LPG 3 KG</b></p>
+          </div>
+          <div class="solution-image" id="sol-img1">
+            <div class="info" id="info-1">
+                <div class="isi-outer">
+                <div class="isi">
+                  <img src="{{ asset('images/right-one.png')}}">
+                  <p class="card-text"><b>Jumlah total tabung = 100</b></p>
+                </div>
+                <hr />
+                <div class="isi">
+                    <img src="{{ asset('images/right-one.png')}}">
+                    <p class="card-text"><b>Jumlah tabung on site = 40</b></p>
+                </div>
+                <hr />
+                <div class="isi">
+                    <img src="{{ asset('images/right-one.png')}}">
+                    <p class="card-text"><b>Jumlah tabung di customer = 60</b></p>
+                </div> 
+                <!-- <hr />
+                <div class="isi">
+                    <img src="{{ asset('images/right-one.png')}}">
+                    <p class="card-text"><b><a href="edit.html">Update Stock</a></b></p>
+                </div>  -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="container-2" class="sol-1">
+          <div class="solution-details" id="sol2">
+            <img src="{{ asset('images/elpiji-pink.png')}}" />
+            <hr />
+            <p><b>LPG 5,5 KG BRIGHT GAS</b></p>
+          </div>
+          <div class="solution-image"id="sol-img2">
+            <div class="info" id="info-2">
+                <div class="isi-outer">
+                  <div class="isi">
+                    <img src="{{ asset('images/right-one.png')}}">
+                    <p class="card-text"><b>Jumlah total tabung = 100</b></p>
+                  </div>
+                  <hr />
+                  <div class="isi">
+                      <img src="{{ asset('images/right-one.png')}}">
+                      <p class="card-text"><b>Jumlah tabung on site = 40</b></p>
+                  </div>
+                  <hr />
+                  <div class="isi">
+                      <img src="{{ asset('images/right-one.png')}}">
+                      <p class="card-text"><b>Jumlah tabung di customer = 60</b></p>
+                  </div> 
                 </div>
             </div>
+          </div>
         </div>
+    </div>
+    <div class="row" id="row1">
+      <div id="container-2" class="sol-1">
+        <div class="solution-details" id="sol3">
+          <img src="{{ asset('images/elpiji-bright.png')}}"/>
+          <hr />
+          <p><b>LPG 12 KG BRIGHT GAS</b></p>
+        </div>
+        <div class="solution-image" id="sol-img3">
+          <div class="info" id="info-3">
+              <div class="isi-outer">
+                <div class="isi">
+                  <img src="{{ asset('images/right-one.png')}}">
+                  <p class="card-text"><b>Jumlah total tabung = 100</b></p>
+                </div>
+                <hr />
+                <div class="isi">
+                    <img src="{{ asset('images/right-one.png')}}">
+                    <p class="card-text"><b>Jumlah tabung on site = 40</b></p>
+                </div>
+                <hr />
+                <div class="isi">
+                    <img src="{{ asset('images/right-one.png')}}">
+                    <p class="card-text"><b>Jumlah tabung di customer = 60</b></p>
+                </div> 
+              </div>
+          </div>
+        </div>
+      </div>
+      <div id="container-2" class="sol-1">
+        <div class="solution-details" id="sol4">
+          <img src="{{ asset('images/elpiji-12kg.png')}}" id="lpg12kg"/>
+          <hr />
+          <p><b>LPG 12 KG</b></p>
+        </div>
+        <div class="solution-image" id="sol-img4">
+          <div class="info" id="info-4">
+              <div class="isi-outer">
+                <div class="isi">
+                  <img src="{{ asset('images/right-one.png')}}">
+                  <p class="card-text"><b>Jumlah total tabung = 100</b></p>
+                </div>
+                <hr />
+                <div class="isi">
+                    <img src="{{ asset('images/right-one.png')}}">
+                    <p class="card-text"><b>Jumlah tabung on site = 40</b></p>
+                </div>
+                <hr />
+                <div class="isi">
+                    <img src="{{ asset('images/right-one.png')}}">
+                    <p class="card-text"><b>Jumlah tabung di customer = 60</b></p>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row" id="row1">
+      <div class="col-3" id="hide"></div>
+      <div id="container-2" class="sol-1">
+        <div class="solution-details" id="sol5">
+          <img src="{{ asset('images/elpiji-50kg.png')}}" id="lpg50kg" />
+          <hr />
+          <p><b>LPG 50 KG</b></p>
+        </div>
+        <div class="solution-image" id="sol-img5">
+          <div class="info" id="info-5"> 
+              <div class="isi-outer">
+                <div class="isi">
+                  <img src="{{ asset('images/right-one.png')}}">
+                  <p class="card-text"><b>Jumlah total tabung = 100</b></p>
+                </div>
+                <hr />
+                <div class="isi">
+                    <img src="{{ asset('images/right-one.png')}}">
+                    <p class="card-text"><b>Jumlah tabung on site = 40</b></p>
+                </div>
+                <hr />
+                <div class="isi">
+                    <img src="{{ asset('images/right-one.png')}}">
+                    <p class="card-text"><b>Jumlah tabung di customer = 60</b></p>
+                </div> 
+              </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-3" id="hide"></div>
+    </div>
         </div>
     </section>
+
 
     <!-- ATASNYA FOOTER -->
     <section class="section" id="footer-upper">

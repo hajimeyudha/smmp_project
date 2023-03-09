@@ -33,6 +33,7 @@ font & reset css
 */
 @import url("https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900");
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=Poppins:wght@200;300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 /* 
 ---------------------------------------------
 reset
@@ -126,7 +127,7 @@ hgroup {
 
 html,
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Raleway', sans-serif;
     font-weight: 400;
     background-color: #fff;
     font-size: 16px;
@@ -171,7 +172,7 @@ global styles
 html,
 body {
     background: #fff;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Raleway', sans-serif;
 }
 
 /* Ketika user ngeselect sesuatu */
@@ -290,8 +291,7 @@ header
 */
 
 .background-header {
-    /* background-color: #e4dfdf; */
-    background-color: #ff0000;
+    background-color: #e4dfdf;
     height: 60px !important;
     position: fixed !important;
     top: 0px;
@@ -302,7 +302,7 @@ header
 
 .background-header .logo,
 .background-header .main-nav .nav li a {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Raleway', sans-serif;
     color: #1e1e1e !important;
 }
 
@@ -330,8 +330,7 @@ header
     -moz-transition: all 0.5s ease 0s;
     -o-transition: all 0.5s ease 0s;
     transition: all 0.5s ease 0s;
-    /* background: #e4dfdf; */
-    background: #ff0000;
+    background: #e4dfdf;
 }
 
 /* END OF HEADER KESELURUHANNYA */
@@ -359,7 +358,7 @@ header
 
 .header-area .main-nav .logo,
 .header-area .main-nav .logo_lokasi {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Raleway', sans-serif;
     position: absolute;
     top: 5%;
     margin-left: 5%;
@@ -502,7 +501,7 @@ header
 }
 
 .header-area .main-nav .nav li.submenu ul li a:hover {
-    background: #ff0000;
+    background: #848080;
     padding-left: 25px;
 }
 
@@ -819,14 +818,14 @@ TRY IT ... with or without CENTER CENTER
 }
 
 .left-text p {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Raleway', sans-serif;
     font-weight: 300;
     line-height: 30px;
     font-size: 24px;
 }
 
 .left-heading .teks_roman {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Raleway', sans-serif;
     text-align: center;
     font-weight: 700;
 }
@@ -971,7 +970,7 @@ home
 
 .left-heading h5 {
     font-size: 28px;
-    font-weight: 500;
+    font-weight: 600;
     margin-bottom: 20px;
 }
 
@@ -1110,6 +1109,7 @@ footer
 --------------------------------------------- 
 */
 footer {
+    font-family: 'Raleway';
     background-color: #fff;
     padding: 15px 0px;
     text-align: center;
@@ -1339,7 +1339,7 @@ preloader
 
 #sol1,
 #info-1 {
-    background: #ff0000;
+    background: #3de22e;
 }
 
 #sol2,
@@ -1481,12 +1481,13 @@ preloader
 }
 /* kalo ini atasnya footer */
 
-.footer-upper {
+#footer-upper, .footer-upper {
+    font-family: 'Raleway';
     height: 200px;
     width: 100%;
     overflow: hidden;
     /* background-color: #f0eeee; */
-    background-color: #fff;
+    background-color: #f0eeee;
 }
 
 .follow {
@@ -1496,7 +1497,7 @@ preloader
     top: 5%;
     width: 277px;
     height: 41px;
-    font-family: 'Open Sans';
+    font-family: 'Raleway';
     font-style: normal;
     font-weight: 700;
     font-size: 20px;
@@ -1543,7 +1544,7 @@ preloader
     height: 41px;
     left: 10%;
     top: 5%;
-    font-family: 'Open Sans';
+    font-family: 'Raleway';
     font-style: normal;
     font-weight: 700;
     font-size: 20px;
@@ -1563,7 +1564,7 @@ preloader
     width: 282px;
     height: 28px;
     margin-left: 5px;
-    font-family: 'Open Sans';
+    font-family: 'Raleway';
     font-style: normal;
     font-weight: 700;
     font-size: 20px;
@@ -1582,7 +1583,7 @@ preloader
     width: 282px;
     height: 28px;
     margin-left: 5px;
-    font-family: 'Open Sans';
+    font-family: 'Raleway';
     font-style: normal;
     font-weight: 700;
     font-size: 20px;
@@ -1602,9 +1603,6 @@ preloader
     padding: 5px;
 }
 
-.footer-content p {
-    margin: 10px 20px;
-}
 
 .footer-content img {
     width: 30px;
@@ -1618,22 +1616,32 @@ preloader
 .footer-content img {
 }
 
-.footer-content .logo {
+.footer-content .logo ,.footer-content p, .footer-content a{
     position: absolute;
     margin-top: 15px;
-
     height: 21px;
-    left: 10px;
     top: 10%;
-
-    font-family: 'Open Sans';
+    font-family: 'Raleway';
     font-style: normal;
     font-weight: 700;
     font-size: 18px;
     line-height: 21px;
     /* identical to box height */
-
     color: #ffffff;
+}
+
+.footer-content p{
+    color:#000;
+    right: 0;
+}
+
+.footer-content .anjayani{
+    color:#000;
+}
+
+#footer.mantep{
+    background: #ffff;
+    background-color: #ffff;
 }
 
 @media (max-width: 991px) {
@@ -1912,13 +1920,14 @@ a.mini-nav-button {
 }
 
 .judulRekap {
+    width: 600px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .judulin{
-    margin: 20px;
+    padding: 10px;
 }
 
 .judulGambar {
@@ -2203,7 +2212,7 @@ a.mini-nav-button {
     color: #fff;
 }
 
-.select-download {
+.transaksi{
     display: flex;
 }
 
@@ -2221,12 +2230,6 @@ a.mini-nav-button {
     display: flex;
 }
 
-.input-group .form-control .tanggal,
-.tanggalTeks,
-.mini-box,
-.download {
-}
-
 .input-group .form-control .tanggal {
     width: 50%;
 }
@@ -2238,8 +2241,6 @@ a.mini-nav-button {
 }
 
 #btn-download {
-    justify-content: right;
-    text-align: right;
     background-color: #0500ff !important;
     color: #fff;
 }
@@ -2261,6 +2262,23 @@ a.mini-nav-button {
     -moz-box-shadow: 1px 3px 9px -2px rgba(0, 0, 0, 0.75);
 }
 
+.navvy {
+    font-size: 16px;
+    margin-left: 20px;
+    font-family: 'Raleway', serif;
+    font-weight: 700;
+}
+
+.navvy-img {
+    display: block;
+    width: 40px;
+    height: 40px;
+    margin-left: 20px;
+}
+
+#tulisan {
+    color: red;
+}
 
 /* Clearfix buat float */
 

@@ -19,6 +19,8 @@ use App\Http\Controllers\PenyaluranController;
 |
 */
 Route::get('/', [SessionController::class, 'index']);
+Route::get('/landing', [SessionController::class, 'index']);
+Route::get('/logon', [SessionController::class, 'logon']);
 Route::post('/login', [SessionController::class, 'login']);
 Route::get('/logout', [SessionController::class, 'logout']);
 
@@ -34,10 +36,13 @@ Route::get('/penyaluran/delete/{id}', [PenyaluranController::Class, 'delete']);
 
 Route::get('/penerimaan', [PenerimaanController::Class, 'index']);
 Route::get('/penerimaan/update/{id}', [PenerimaanController::Class, 'updateView']);
+
 Route::get('/penerimaan/update/ubah/{id}', [PenerimaanController::Class, 'ubah']);
 Route::get('/penerimaan/delete/{id}', [PenerimaanController::Class, 'delete']);
 
 Route::get('/laporan', [LaporanController::Class, 'index']);
+Route::get('/laporan/masuk', [LaporanController::Class, 'index']);
+Route::get('/laporan/keluar', [LaporanController::Class, 'keluar']);
 Route::get('/laporan/create', [LaporanController::Class, 'createView']);
 Route::post('/laporan/tambah', [LaporanController::Class, 'tambah']);
 Route::get('/laporan/update/{id}', [LaporanController::Class, 'updateView']);

@@ -22,6 +22,12 @@ class LaporanController extends Controller
         return view('laporan.laporan', ['ListLaporan' => $this->Data_laporanModel]);
     }
 
+    function keluar()
+    {
+        //menampilkan view laporan dengan mengirimkan data list laporan
+        return view('laporan.laporanKeluar', ['ListLaporan' => $this->Data_laporanModel]);
+    }
+ 
 
     function createView()
     {

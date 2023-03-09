@@ -10,6 +10,10 @@ use Illuminate\Support\Facades\Session;
 class SessionController extends Controller
 {
     function index(){
+        return view("landing");
+    }
+
+    function logon(){
         return view("login");
     }
 

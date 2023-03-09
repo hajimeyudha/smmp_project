@@ -74,7 +74,7 @@
                 </div> --}}
                 <div class="col-sm-2 dropdown">
                     <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      Uang Masuk
+                      Uang Keluar
                     </button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                       <a class="dropdown-item" href="/laporan/masuk">Uang Masuk</a>
@@ -113,7 +113,7 @@
             <table>
                 <tr>
                     <th rowspan="2">Tanggal</th>
-                    <th rowspan="2">Uang Masuk</th>
+                    <th rowspan="2">Uang Keluar</th>
                     <th rowspan="2">Keterangan</th>
                     <th>Action</th>
                 </tr>
@@ -125,9 +125,9 @@
                     <tr>
                         
                         <td>{{ date('d-m-Y', strtotime($item->tanggal_laporan)) }}</td>
-                        <td>Rp {{ number_format($item->uang_masuk) }}</td>
+                        <td>Rp {{ number_format($item->uang_keluar) }}</td>
                         <td>{{ $item->keterangan_laporan }}</td>
-                        <td><a href="<?php echo url("/laporan/update/{$item->id_laporan}");?>" class="modal-link-kary edit-button laporan"><b>UPDATE</b></a>
+                        <td><a href="<?php echo url("/laporan/updateKeluar/{$item->id_laporan}");?>" class="modal-link-kary edit-button laporan"><b>UPDATE</b></a>
                             <a href="<?php echo url("/laporan/delete/{$item->id_laporan}");?>" class="modal-link-kary edit-button cancel"><b>DELETE</b></a>
                         </td>
                     </tr>
