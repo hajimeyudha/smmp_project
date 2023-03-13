@@ -20,7 +20,8 @@
 
 <body>
     <!-- Header here -->
-    <header class="header-area header-sticky navbarAtas">
+    <!-- ***** Header Area Start ***** -->
+    <header class="header-area header-sticky">
       <div class="container">
         <nav class="main-nav">
           <div class="classdiv">
@@ -28,25 +29,14 @@
             <a href="/home#home" class="logo">PT SUBUR MAKMUR MIGAS PRATAMA</a>
             <p class="logo_lokasi"><span>Kabupaten Demak, Jawa Tengah</span></p>
           </div>
-          <a class="menu-trigger">
-            <span>Menu</span>
-          </a>
-        </nav>
-        <nav>
-          <div class="logo_kanan">
-            <img class="logo_pertamina" src="{{asset('images/pertamina_logo.png')}}" alt="logo pertamina">
-            <p class="pertamina">PERTAMINA</p>
-          </div>
-        </nav>
-      </div>
-    </header>
-    <!-- ***** Header Area End ***** -->
-    <!-- End of Header -->
-    <!-- ***** Header Area Start ***** -->
-    <header class="header-area header-sticky navbarBawah">
-      <div class="container NavBawahContainer">
-        <nav class="main-nav">
           <ul class="nav navya">
+            <div class="classnav"></div>
+            <div class="box-nav">
+              <i class="fas fa-home"></i>
+              <li class="scroll-to-section" id="home-nav">
+                <a href="/home#home">Tentang Kami</a>
+              </li>
+            </div>
             <li class="scroll-to-section"><a href="/home#gas-info">Info Produk</a></li>
             <li class="submenu">
               <a href="javascript:;">Proses</a>
@@ -63,7 +53,7 @@
             <li class="scroll-to-section">
               <a href="/home#footer-upper">Kontak</a>
             </li>
-            <li class="submenu profilUser">
+            <li class="submenu">
               <a href="javascript:;">{{auth()->user()->name}}</a>
               <ul>
                 <div class="row" style="background-color:  #E7DDDD">

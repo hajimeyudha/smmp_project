@@ -14,9 +14,9 @@
     <!-- section gas info -->
     <section class="section" id="stok">
         <div class="container">
-    <div class="left-heading">
+    {{-- <div class="left-heading">
       <h5 class="text-center">STOK BARANG PT SUBUR MAKMUR MIGAS PRATAMA</h5>
-    </div>
+    </div> --}}
     <div class="row" id="row1">
         <div id="container-2" class="sol-1">
           <div class="solution-details" id="sol1">
